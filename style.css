@@ -1,0 +1,206 @@
+/* Reset & Body */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(148, 38%, 91%);
+  font-family: 'Karla', sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+/* Contact Form Container */
+form.ContactForm {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+header h1 {
+  color: hsl(169, 82%, 27%);
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Labels */
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: hsl(169, 82%, 27%);
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid hsl(169, 82%, 27%);
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: inherit;
+  margin-bottom: 1rem;
+}
+
+/* Name fields side by side */
+.name-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.name-group .form-field {
+  flex: 1;
+}
+
+/* Query Type */
+.query-options {
+  display: flex;
+  gap: 2rem; 
+  margin-top: 0.5rem;
+}
+
+.radio-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  min-width: 220px;      
+  flex: 1;                
+}
+
+.radio-box input[type="radio"] {
+  accent-color: hsl(169, 82%, 27%);
+}
+
+
+/* Message Box */
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Consent Checkbox */
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.consent input[type="checkbox"] {
+  accent-color: hsl(169, 82%, 27%);
+  margin-top: 4px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  width: 100%;
+  background-color: hsl(169, 82%, 27%);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: hsl(169, 82%, 22%);
+}
+
+.message-box {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: hsl(169, 82%, 20%);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  line-height: 1.4;
+  z-index: 9999;
+  min-width: 280px;
+  max-width: 90%;
+  display: none;
+}
+
+.message-box .messgae-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-error {
+  border: 2px solid hsl(0, 100%, 74%) !important;
+}
+
+
+.error-msg {
+  color: hsl(0, 100%, 74%);
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  text-align: right;
+  font-style: italic;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  /* Stack first name and last name vertically */
+  .name-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Make radio options stack vertically */
+  .query-options {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Adjust radio box size for smaller screens */
+  .radio-box {
+    min-width: 100%;
+    justify-content: flex-start;
+  }
+
+  /* Reduce padding around form */
+  form.ContactForm {
+    padding: 1.5rem;
+  }
+
+  /* Adjust heading size */
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  /* Reduce general spacing */
+  body {
+    padding: 1rem;
+  }
+}
